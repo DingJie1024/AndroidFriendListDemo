@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.lessontestapp">
+
+	<uses-permission android:name="android.permission.CALL_PHONE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission
+			android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+			tools:ignore="ScopedStorage"/> <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission
+			android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+			tools:ignore="ScopedStorage"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
+	<application
+			android:allowBackup="true"
+			android:icon="@mipmap/ic_launcher"
+			android:label="@string/app_name"
+			android:roundIcon="@mipmap/ic_launcher_round"
+			android:supportsRtl="true"
+			android:theme="@style/AppTheme">
+		<activity android:name=".MyPayActivity">
+		</activity>
+		<activity android:name=".MyPrePaidPhone">
+		</activity>
+
+		<service
+				android:name=".service.PlayVideoService"
+				android:enabled="true"
+				android:exported="true">
+		</service>
+		<service
+				android:name=".service.PlayAudioService"
+				android:enabled="true"
+				android:exported="true">
+		</service>
+
+		<activity android:name=".MyVideoActivity">
+		</activity>
+		<activity android:name=".PlayVideoActivity">
+		</activity>
+		<activity android:name=".MyAudioActivity">
+		</activity>
+		<activity android:name=".PlayAudioActivity">
+		</activity>
+		<activity android:name=".IndexActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+				android:name=".MyActivity"
+				android:label="@string/activity_label_my_page">
+		</activity>
+		<activity
+				android:name=".MajorSettingActivity"
+				android:label="@string/activity_label_major_setting">
+		</activity>
+		<activity
+				android:name=".SetFontSizeActivity"
+				android:label="@string/activity_label_set_font_size">
+		</activity>
+		<activity
+				android:name=".ClassmateFriendsActivity"
+				android:label="@string/activity_classmate_friend_label">
+		</activity>
+
+		<receiver
+				android:name=".receiver.MyReceiver"
+				android:enabled="true"
+				android:exported="true">
+		</receiver>
+
+		<service
+				android:name=".service.HintAppCloseService"
+				android:enabled="true"
+				android:exported="true">
+		</service>
+
+		<activity
+				android:name=".EditFriendsInfoActivity"
+				android:label="@string/activity_edit_friend_info">
+		</activity>
+		<activity
+				android:name=".InfoActivityt"
+				android:label="@string/activity_specialty_setting_label">
+		</activity>
+		<activity
+				android:name=".MainActivity"
+				android:label="@string/config_activity_label_add_stranger">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+			</intent-filter>
+		</activity>
+	</application>
+
+</manifest>

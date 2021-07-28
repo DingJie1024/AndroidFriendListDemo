@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+
+    <item android:title="@string/menu_friend_list_title_search"
+          app:showAsAction="ifRoom|collapseActionView"
+          app:actionLayout="@layout/friend_search"/>
+    <item android:title="@string/menu_friend_list_title_add">
+        <menu>
+            <item
+                    android:title="@string/menu_friend_list_title_stranger"
+                    android:id="@+id/idAddStranger"/>
+            <item
+                    android:title="@string/menu_friend_list_title_friends_share"
+                    android:id="@+id/idShareFriends"/>
+        </menu>
+    </item>
+    <item android:title="@string/menu_friend_list_title_inner_storage">
+        <menu>
+            <item
+                    android:title="@string/menu_friend_list_title_import"
+                    android:id="@+id/idInnerStorageImport"/>
+            <item
+                    android:title="@string/menu_friend_list_title_export"
+                    android:id="@+id/idInnerStorageExport"/>
+        </menu>
+    </item>
+    <item android:title="@string/menu_friend_list_title_outer_storage">
+        <menu>
+            <item
+                    android:title="@string/menu_friend_list_title_import"
+                    android:id="@+id/idOuterStorageImport"/>
+            <item
+                    android:title="@string/menu_friend_list_title_export"
+                    android:id="@+id/idOuterStorageExport"/>
+        </menu>
+    </item>
+</menu>

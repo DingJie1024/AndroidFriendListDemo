@@ -1,0 +1,5 @@
+include ':remoteserviceapp'
+include ':remoteresulteservice'
+include ':mycontentprovider'
+include ':app'
+rootProject.name = "LessonTestApp"
